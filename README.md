@@ -25,7 +25,7 @@ Put the source files on your local server, and point the js script to the remote
 ```
 
 **Change `remote_url` in the js file to point at the http location of the file**
-Example: `remote_url = 'http://www.github.com';`  
+Example: `remote_url = 'http://www.example.com';`  
 
 > __**NOTE**__
 > This is needed for jsonp to query the host server where jstweet-remote.js sits. We're doing remote javascript and php execution, so jsonp is required or XSS errors will happen.  
