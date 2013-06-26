@@ -2,6 +2,9 @@ UrTweet
 =======
 
 UrTweet is a jquery plugin for grabbing a user's timeline.  
+It pulls in everything in the user timeline object (statuses_userTimeline) returned from twitter's 1.1 API.  
+See https://dev.twitter.com/docs/api/1.1/get/statuses/user_timeline for more information.  
+
 It can be used as a remote service to serve multiple clients, or set up locally to pull your own tweets in.  
 UrTweet makes use of the awesome Twitter API 1.1 library CodeBird.
 
@@ -12,11 +15,23 @@ Make sure that you have `cacert.pem` in the same folder as `codebird.php`, or Co
 
 ##Remote Executed version  
 
-**Include jQuery and the jstweet-remote.js file**
+**Include jQuery and the jstweet-remote.js file**  
 ```
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
+```
+Put the source files on your local server, and point the js script to the remote server
+```
 <script src="http://www.example.com/jstweet-remote.js" type="text/javascript"></script>
 ```
+
+**Change `remote_url` in the js file to point at the http location of the file**
+Example: `remote_url = 'http://www.github.com';`  
+
+__**NOTE**__
+This is needed for jsonp to query the host server where jstweet-remote.js sits. We're doing remote javascript and php execution, so jsonp is required or XSS errors will happen.  
+
+
+
 
 **Set up the javascript function with the following vars:**  
 username - The twitter username you want to fetch.  
