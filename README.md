@@ -27,8 +27,8 @@ Put the source files on your local server, and point the js script to the remote
 **Change `remote_url` in the js file to point at the http location of the file**
 Example: `remote_url = 'http://www.github.com';`  
 
-__**NOTE**__
-This is needed for jsonp to query the host server where jstweet-remote.js sits. We're doing remote javascript and php execution, so jsonp is required or XSS errors will happen.  
+> __**NOTE**__
+> This is needed for jsonp to query the host server where jstweet-remote.js sits. We're doing remote javascript and php execution, so jsonp is required or XSS errors will happen.  
 
 
 
@@ -47,3 +47,19 @@ $(function(){
 ```html
 <div id="jstwitter"></div>
 ```
+
+**The following code will be inserted into #jstwitter:**
+```html
+<div class="item">
+  {IMG}
+  <div class="tweet-wrapper">
+    <span class="text">{TEXT}</span>
+    <span class="time">
+    <a href="{URL}" target="_blank">{AGO}</a>
+    </span>
+    by
+    <span class="user">{USER}</span>
+  </div>
+</div>
+```
+</div>
