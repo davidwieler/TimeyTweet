@@ -2,11 +2,7 @@ $(function() {
 	
 UrTweet = {
      
-    // Set twitter hash/user, number of tweets & id/class to append tweets
-    // You need to clear tweet-date.txt before toggle between hash and user
-    // for multiple hashtags, you can separate the hashtag with OR, eg:
-    // hash: '%23jquery OR %23css'			    
-    search: '', //leave this blank if you want to show user's tweet
+    //Clean the variables
     user: '', //username
     numTweets: '', //number of tweets
     appendTo: '#jstwitter',
