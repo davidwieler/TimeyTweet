@@ -18,8 +18,9 @@ UrTweet = {
     // core function of jqtweet
     // https://dev.twitter.com/docs/using-search
     loadTweets: function(user,numTweets) {
+    		var remote_url = 'HTTP LOCATION OF grabtweets.php - EXAMPLE: http://www.github.com';
 
-		$.getJSON('http://www.davidwieler.com/grabtweets.php?callback=?','q='+user+'&count='+numTweets+'&api=statuses_userTimeline',function(data, textStatus, xhr){
+		$.getJSON(remote_url+'/grabtweets.php?callback=?','q='+user+'&count='+numTweets+'&api=statuses_userTimeline',function(data, textStatus, xhr){
 			 
 			if(data.httpstatus == 200){
 				for (var i = 0; i < numTweets; i++) {
