@@ -62,4 +62,16 @@ $(function(){
   </div>
 </div>
 ```
-</div>
+  
+__**CSS Styles**__ 
+```css    	
+    #jstwitter {} 
+		.item{} 
+		.tweet-wrapper{} 
+		.tweet-wrapper .text{}
+		.tweet-wrapper .text a{}
+		.tweet-wrapper .text a:hover{}
+		.tweet-wrapper .text img{}
+		.tweet-wrapper .time{}
+		.tweet-wrapper .user{} 
+```
