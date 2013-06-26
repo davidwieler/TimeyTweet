@@ -1,6 +1,6 @@
 $(function() {  	
 	
-JQTWEET = {
+UrTweet = {
      
     // Set twitter hash/user, number of tweets & id/class to append tweets
     // You need to clear tweet-date.txt before toggle between hash and user
@@ -18,25 +18,6 @@ JQTWEET = {
     // core function of jqtweet
     // https://dev.twitter.com/docs/using-search
     loadTweets: function(user,numTweets) {
-		//var user = username;
-		// numTweets = nums;
-        var request;
-         
-        // different JSON request {hash|user}
-        if (JQTWEET.search) {
-          request = {
-              q: JQTWEET.search,
-              count: JQTWEET.numTweets,
-              api: 'search_tweets'
-          }
-        } else {
-			
-          request = {
-              q: user,
-              count: numTweets,
-              api: 'statuses_userTimeline'
-          }
-        }
 
 		$.getJSON('http://www.davidwieler.com/grabtweets.php?callback=?','q='+user+'&count='+numTweets+'&api=statuses_userTimeline',function(data, textStatus, xhr){
 			 
@@ -54,11 +35,11 @@ JQTWEET = {
                     }
 
                     $(JQTWEET.appendTo).append( JQTWEET.template
-						//.replace('{ID_NUM}', data[i].id)
-						.replace('{TEXT}', JQTWEET.ify.clean(data[i].text) )
+			//.replace('{ID_NUM}', data[i].id) -- Uncomment to get ID
+			.replace('{TEXT}', UrTweet.ify.clean(data[i].text) )
                         .replace('{USER}', data[i].user.screen_name)
                         .replace('{IMG}', img)                                
-                        .replace('{AGO}', JQTWEET.timeAgo(data[i].created_at) )
+                        .replace('{AGO}', UrTweet.timeAgo(data[i].created_at) )
                         .replace('{URL}', url )			                            
                         );					
 				}
