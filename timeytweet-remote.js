@@ -1,20 +1,20 @@
 $(function() {  	
 	
-UrTweet = {
+TimeyTweet = {
      
     //Clean the variables
     user: '', //username
     numTweets: '', //number of tweets
-    appendTo: '#jstwitter',
-    template: '<div class="item">{IMG}<div class="tweet-wrapper"><span class="text">{TEXT}</span>\
+    appendTo: '#timeytwitter',
+    template: '<div class="item" id="{ID_NUM}">{IMG}<div class="tweet-wrapper"><span class="text">{TEXT}</span>\
                <span class="time"><a href="{URL}" target="_blank">{AGO}</a></span>\
                 <span class="user"> by {USER}</span></div></div>',
 
      
-    // core function of jqtweet
+    // core function of TimeyTweet
     // https://dev.twitter.com/docs/using-search
     loadTweets: function(user,numTweets) {
-    		var remote_url = 'HTTP LOCATION OF grabtweets.php - EXAMPLE: http://www.github.com';
+    		var remote_url = 'HTTP LOCATION OF grabtweets.php - EXAMPLE: http://www.example.com';
 
 		$.getJSON(remote_url+'/grabtweets.php?callback=?','q='+user+'&count='+numTweets+'&api=statuses_userTimeline',function(data, textStatus, xhr){
 			 
@@ -31,8 +31,8 @@ UrTweet = {
                       //no media
                     }
 
-                    $(JQTWEET.appendTo).append( JQTWEET.template
-			//.replace('{ID_NUM}', data[i].id) -- Uncomment to get ID
+                    $(TimeyTweet.appendTo).append( TimeyTweet.template
+			.replace('{ID_NUM}', data[i].id) -- Uncomment to get ID
 			.replace('{TEXT}', UrTweet.ify.clean(data[i].text) )
                         .replace('{USER}', data[i].user.screen_name)
                         .replace('{IMG}', img)                                
