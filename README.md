@@ -6,7 +6,7 @@ It pulls in everything in the user timeline object (statuses_userTimeline) retur
 See https://dev.twitter.com/docs/api/1.1/get/statuses/user_timeline for more information.  
 
 It can be used as a remote service to serve multiple clients websites from one location.  
-UrTweet makes use of the awesome Twitter API 1.1 library CodeBird.
+TimeyTweet makes use of the awesome Twitter API 1.1 library CodeBird.
 
 https://github.com/mynetx/codebird-php  
 CodeBird requires php 5.3 as it uses namespaces  
@@ -48,7 +48,7 @@ $(function(){
 <div id="timeytwitter"></div>
 ```
 
-**The following code will be inserted into #jstwitter:**
+**The following code will be inserted into #timeytwitter:**
 ```html
 <div class="item">
   {IMG}
