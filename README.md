@@ -50,7 +50,7 @@ $(function(){
 
 **The following code will be inserted into #timeytwitter:**
 ```html
-<div class="item">
+<div class="item" id="{ID_NUM}">
   {IMG}
   <div class="tweet-wrapper">
     <span class="text">{TEXT}</span>
