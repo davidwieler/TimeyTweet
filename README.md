@@ -23,9 +23,16 @@ File Structure (server A - www.example.com)
 /codebird.php
 ```  
 
-Open `timeytweet-remote.js` in a code editor.  
-**Change `remote_url` to point at the http location of the file**  
-Example: `remote_url = 'http://www.example.com';` 
+* Open `timeytweet-remote.js` in a code editor.  
+ * **Change `remote_url` to point at the http location of the file**  
+ * Example: `remote_url = 'http://www.example.com';`  
+
+* Open `grabtweets.php` in a code editor.  
+ * Change the following to your twitter app tokens/keys:
+ * `$CONSUMER_KEY = '';`
+ * `$CONSUMER_SECRET = '';`
+ * `$ACCESS_TOKEN = '';`
+ * `$ACCESS_TOKEN_SECRET = '';`
 
 ##Locally  
 (Server B - www.urdomain.com)
