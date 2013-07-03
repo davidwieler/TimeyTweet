@@ -14,9 +14,8 @@ CodeBird requires php 5.3 as it uses namespaces
 __**NOTE**__
 Make sure that you have `cacert.pem` in the same folder as `codebird.php`, or CodeBird will not work.
 
-##Remote Host Server
-
-File Structure(server A - www.example.com)
+##Remote Host Server  
+File Structure (server A - www.example.com)
 ```
 /grabtweets.php
 /timeytweet-remote.js
@@ -40,7 +39,7 @@ Example: `remote_url = 'http://www.example.com';`
 </script>
 ```
 
-**Put this DIV on in your HTML file where you want the tweets to display:**
+**Put this DIV in your HTML file where you want the tweets to display:**
 ```html
 <div id="timeytwitter"></div>
 ```
